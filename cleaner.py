@@ -1,8 +1,11 @@
+#https://www.youtube.com/watch?v=3RNPJbUHZKs
+#https://towardsdatascience.com/remove-text-from-images-using-cv2-and-keras-ocr-24e7612ae4f4
+
 import matplotlib.pyplot as plt
 import keras_ocr
 import cv2
 import math
-import numpy as np
+import numpy as np 
 
 def midpoint(x1, y1, x2, y2):
     x_mid = int((x1 + x2)/2)
@@ -31,7 +34,8 @@ def inpaint_text(img_path, pipeline):
         
         cv2.line(mask, (x_mid0, y_mid0), (x_mid1, y_mi1), 255,    
         thickness)
-        img = cv2.inpaint(img, mask, 7, cv2.INPAINT_NS)
+        #img = cv2.inpaint(img, mask, 7, cv2.INPAINT_NS)
+        img = cv2.inpaint(img, mask, 3, cv2.INPAINT_TELEA)
         cv2.imshow('image',img)
         cv2.waitKey(0)
                  

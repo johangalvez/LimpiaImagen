@@ -1,4 +1,5 @@
 #https://stackoverflow.com/questions/52748270/how-to-remove-image-noise-using-opencv-python
+#https://rajathithanrajasekar.medium.com/opencv-series-12-blemish-removal-46b3e0e32722
 
 import numpy as np
 import cv2
